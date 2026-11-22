@@ -1,0 +1,38 @@
+@import 'tailwindcss';
+
+.card_animation{
+    animation: animated_card 4s infinite;
+}
+
+@keyframes animated_card {
+    0%{
+        transform: rotate(-1deg);
+    }
+    50%{
+        transform: rotate(-10deg);
+    }
+    100%{
+        transform: rotate(-1deg);
+    }
+}
+.transition{
+    transition: all 3s ease-in-out linear;
+}
+
+.img_animation{
+    animation: img_animation 4s ease-in-out infinite;
+}
+
+@keyframes img_animation {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 100;
+    }
+    
+    100%{
+        opacity: 0;
+        
+    }
+}
