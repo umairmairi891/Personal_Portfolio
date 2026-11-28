@@ -137,17 +137,17 @@ export default function Projects() {
   });
   const navigate=useNavigate();
   return (
-    <main  className="mx-auto min-h-[calc(100vh-150px)] w-full  px-8 pb-[100px] pt-[100px] max-md:px-5 max-md:pb-[70px] max-md:pt-[67px]">
+    <main  className="mx-auto min-h-[calc(100vh-150px)] w-full dark:text-gray-100  px-8 pb-[100px] pt-[100px] max-md:px-5 max-md:pb-[70px] max-md:pt-[67px]">
       <Eyebrow>A few things I&apos;ve made</Eyebrow>
       <h1 data-aos='fade-up' className="mb-0 mt-6 text-[clamp(48px,6vw,74px)] font-medium leading-[1.06] tracking-[-.075em] max-md:text-[clamp(44px,10vw,66px)]">
         Selected <GradientText>Projects.</GradientText>
       </h1>
-      <p data-aos='fade-up' className="mt-5 max-w-[520px] text-[17px] leading-relaxed text-[#706d78]">
+      <p data-aos='fade-up' className="mt-5 max-w-[520px] dark:text-gray-300 text-[17px] leading-relaxed text-[#706d78]">
         A mix of experiments and real-world interfaces, made with care from first sketch to final interaction.
       </p>
       <div className="mt-[52px] border-t border-[#23222a18]">
         {projects.map((project) => (
-          <article data-aos='fade-up' className="grid  grid-cols-1 gap-4 border-b border-[#23222a18] py-7 md:grid-cols-[1.05fr_.95fr] md:gap-10" key={project.number}>
+          <article data-aos='fade-up' className="grid   grid-cols-1 gap-4 border-b border-[#23222a18] py-7 md:grid-cols-[1.05fr_.95fr] md:gap-10" key={project.number}>
             <div className={`relative grid h-[200px] md:h-[440px] place-items-center overflow-hidden rounded-xl ${project.visual}`}>
               <div className="w-[80%] my-5 overflow-hidden rounded-lg border border-white/75 bg-[#fffdf9ed] shadow-[0_18px_50px_#32234220]">
                 <div aria-hidden="true" className="flex gap-1 border-b border-[#33263b12] p-[9px]">
@@ -165,22 +165,22 @@ export default function Projects() {
             </div>
             <div className="flex flex-col justify-between h-auto md:h-auto py-3 max-md:px-0.5">
               <div>
-                <div className="flex justify-between">
-                <span className="text-[13px] text-[#74717b]">{project.type}</span>
-                <span className="text-[13px] text-[#74717b]">{project.date}</span>
+                <div className="flex  justify-between">
+                <span className="text-[13px] dark:text-gray-100 text-[#74717b]">{project.type}</span>
+                <span className="text-[13px] dark:text-gray-100 text-[#74717b]">{project.date}</span>
                 </div>
                 <h2 className="mb-0 mt-[13px] text-3xl font-semibold tracking-[-.05em]">{project.name}</h2>
-                <p className="mb-0 mt-2 max-w-[430px] text-[15px] leading-relaxed text-[#706d78]">{project.description}</p>
+                <p className="mb-0 dark:text-gray-100 mt-2 max-w-[430px] text-[15px] leading-relaxed text-[#706d78]">{project.description}</p>
               </div>
               <ul className="mt-5 flex flex-wrap gap-5 p-0">
                 {project.tags.map((tag) => (
-                  <li className="list-none w-50 md:w-auto hover:text-white hover:font-semibold duration-200 rounded-full border border-[#30273a1c] px-5 hover:bg-[linear-gradient(110deg,#7650d8,#bd5fa8_72%,#ed856a)] cursor-pointer py-1.5 text-[15px] text-[#62596b]" key={tag}>{tag}</li>
+                  <li className="list-none w-50  md:w-auto hover:text-white hover:font-semibold duration-200 rounded-full border dark:text-gray-200 dark:border-gray-100 border-[#30273a1c] px-5 hover:bg-[linear-gradient(110deg,#7650d8,#bd5fa8_72%,#ed856a)] cursor-pointer py-1.5 text-[15px] text-[#62596b]" key={tag}>{tag}</li>
                 ))}
               </ul>
               <div className="flex gap-10 mt-10 md:mt-0">      
                 <button    className='px-10 py-2 bg-[linear-gradient(110deg,#7650d8,#bd5fa8_72%,#ed856a)] rounded-lg text-white font-semibold cursor-pointer'>
                   <a href={project.codeUrl} target='_blank'>Code</a></button>
-                <button className='px-10 py-2  rounded-lg text-black  border border-gray-200 font-semibold hover:bg-gray-100 duration-100 cursor-pointer'><a target='_blank' href={project.liveSite}>Live Site</a></button>
+                <button className='px-10 py-2  rounded-lg text-black dark:border-gray-300 dark:text-gray-100 hover:text-black    border border-gray-200 font-semibold hover:bg-gray-100 duration-100 cursor-pointer'><a target='_blank' href={project.liveSite}>Live Site</a></button>
               </div>
             </div>
           </article>

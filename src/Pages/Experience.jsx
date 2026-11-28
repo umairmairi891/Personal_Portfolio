@@ -31,32 +31,32 @@ export default function Experience() {
     duration:1000,
   });
   return (
-    <main className="mx-auto min-h-[calc(100vh-150px)] w-[90%]  px-8 pb-[100px] pt-[100px] max-md:px-5 max-md:pb-[70px] max-md:pt-[67px]">
+    <main className="mx-auto min-h-[calc(100vh-150px)] w-[90%] dark:text-gray-100  px-8 pb-[100px] pt-[100px] max-md:px-5 max-md:pb-[70px] max-md:pt-[67px]">
       <Eyebrow>Work &amp; growth</Eyebrow>
       <h1 data-aos='fade-up' className="mb-0 mt-6 text-[clamp(48px,6vw,74px)] font-medium leading-[1.06] tracking-[-.075em] max-md:text-[clamp(44px,10vw,66px)]">
         A path built<br />with <GradientText>Curiosity.</GradientText>
       </h1>
-      <p data-aos='fade-up' className="mt-5 max-w-[520px] text-[17px] leading-relaxed text-[#706d78]">
+      <p data-aos='fade-up' className="mt-5 max-w-[520px] dark:text-gray-300 text-[17px] leading-relaxed text-[#706d78]">
         A few chapters in my journey making thoughtful, useful things for the web.
       </p>
       <div className="mt-[52px]">
         {experience.map((item, index) => (
           <article data-aos='fade-up' className="grid grid-cols-1 gap-4 border-t border-[#23222a18] py-7 md:grid-cols-[190px_1fr] md:gap-10" key={item.title}>
             <div className="flex text-sm items-start flex-col justify-center    gap-2.5 font-mono font-semibold  text-[#332e3b]">
-              <div className="flex items-start gap-1">
+              <div className="flex items-start dark:text-gray-100 gap-1">
                 <span>{item.period}</span>
               </div>
-              <span>{item.duration}</span>
+              <span className='dark:text-gray-100'>{item.duration}</span>
             </div>
-            <div className="rounded-xl border border-[#25202c12] bg-white/65 p-6 shadow-[0_12px_35px_#34254708] max-md:p-5">
+            <div className="rounded-xl border border-[#25202c12] bg-white/65 dark:border-blue-600  dark:bg-slate-800 p-6 shadow-[0_12px_35px_#34254708] max-md:p-5">
               <div className="flex items-start justify-between gap-4">
                 <div>
-                  <span className="text-[15px] text-[#77737d]">{item.type}</span>
-                  <h2 className="mb-0 mt-2 text-xl font-semibold tracking-[-.04em]">{item.title}</h2>
+                  <span className="text-[15px] dark:text-gray-100 text-[#77737d]">{item.type}</span>
+                  <h2 className="mb-0 mt-2 text-2xl font-bold tracking-[-.04em]">{item.title}</h2>
                 </div>
-                <span aria-hidden="true" className="font-mono text-sm text-gray-700 font-semibold">{item.institute}</span>
+                <span aria-hidden="true" className="font-mono text-sm dark:text-gray-100 text-gray-700 font-semibold">{item.institute}</span>
               </div>
-              <p className="mb-4 mt-3 text-sm leading-relaxed text-[#706d78]">{item.description}</p>
+              <p className="mb-4 dark:text-gray-100 mt-3 text-sm leading-relaxed text-[#706d78]">{item.description}</p>
               <ul className="flex flex-wrap gap-2 p-0 text-[13px] text-[#62596b]">
                 {item.highlights.map((highlight) => (
                   <li className="list-none font-semibold rounded-full border hover:bg-cyan-900 cursor-pointer hover:text-white duration-150 border-[#30273a1c] bg-[#f7f5f0] px-3 py-1.5" key={highlight}>{highlight}</li>
